@@ -31,7 +31,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="uVq-fw-o7K" secondAttribute="trailing" id="wTo-fa-DSj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Restaurants" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
