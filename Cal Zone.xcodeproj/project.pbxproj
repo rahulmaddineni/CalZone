@@ -14,9 +14,35 @@
 		43E5D3381DC41907007184B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E5D3361DC41907007184B8 /* Main.storyboard */; };
 		43E5D33A1DC41907007184B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E5D3391DC41907007184B8 /* Assets.xcassets */; };
 		43E5D33D1DC41907007184B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E5D33B1DC41907007184B8 /* LaunchScreen.storyboard */; };
-		43E5D3451DC4293C007184B8 /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = 43E5D3441DC4293C007184B8 /* PodFile */; };
 		43E5D3471DC43BE2007184B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5D3461DC43BE2007184B8 /* MapKit.framework */; };
+		43E5D3491DC445DF007184B8 /* FSAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5D3481DC445DF007184B8 /* FSAPI.swift */; };
+		43E5D34B1DC44E9E007184B8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 43E5D34A1DC44E9E007184B8 /* Podfile */; };
+		43E5D34D1DC450D2007184B8 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 43E5D34C1DC450D2007184B8 /* Cartfile */; };
+		43E5D36C1DC4700B007184B8 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5D36B1DC4700B007184B8 /* Venue.swift */; };
+		43E5D36E1DC470F4007184B8 /* CoffeeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5D36D1DC470F4007184B8 /* CoffeeAnnotation.swift */; };
+		43E5D3711DC478C6007184B8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5D36F1DC478C6007184B8 /* Realm.framework */; };
+		43E5D3721DC478C6007184B8 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5D36F1DC478C6007184B8 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43E5D3731DC478C6007184B8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5D3701DC478C6007184B8 /* RealmSwift.framework */; };
+		43E5D3741DC478C6007184B8 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5D3701DC478C6007184B8 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43E5D3791DC47903007184B8 /* QuadratTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5D3781DC47903007184B8 /* QuadratTouch.framework */; };
+		43E5D37A1DC47903007184B8 /* QuadratTouch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5D3781DC47903007184B8 /* QuadratTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43E5D3681DC4685E007184B8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43E5D3741DC478C6007184B8 /* RealmSwift.framework in Embed Frameworks */,
+				43E5D37A1DC47903007184B8 /* QuadratTouch.framework in Embed Frameworks */,
+				43E5D3721DC478C6007184B8 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00D8398E34F512C20AA014F3 /* Pods_Cal_Zone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cal_Zone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,8 +55,20 @@
 		43E5D3391DC41907007184B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43E5D33C1DC41907007184B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43E5D33E1DC41907007184B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43E5D3441DC4293C007184B8 /* PodFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; };
 		43E5D3461DC43BE2007184B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		43E5D3481DC445DF007184B8 /* FSAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAPI.swift; sourceTree = "<group>"; };
+		43E5D34A1DC44E9E007184B8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		43E5D34C1DC450D2007184B8 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		43E5D34E1DC4593E007184B8 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
+		43E5D3501DC4595F007184B8 /* QuadratTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuadratTouch.framework; path = Carthage/Build/iOS/QuadratTouch.framework; sourceTree = "<group>"; };
+		43E5D3521DC45D58007184B8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		43E5D3531DC45D58007184B8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		43E5D36B1DC4700B007184B8 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		43E5D36D1DC470F4007184B8 /* CoffeeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeAnnotation.swift; sourceTree = "<group>"; };
+		43E5D36F1DC478C6007184B8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		43E5D3701DC478C6007184B8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		43E5D3751DC478F1007184B8 /* QuadratTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuadratTouch.framework; path = Carthage/Build/iOS/QuadratTouch.framework; sourceTree = "<group>"; };
+		43E5D3781DC47903007184B8 /* QuadratTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuadratTouch.framework; path = Carthage/Build/iOS/QuadratTouch.framework; sourceTree = "<group>"; };
 		DE0C84733A6F0E11CEE3279E /* Pods-Cal Zone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cal Zone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cal Zone/Pods-Cal Zone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E5D3791DC47903007184B8 /* QuadratTouch.framework in Frameworks */,
+				43E5D3711DC478C6007184B8 /* Realm.framework in Frameworks */,
+				43E5D3731DC478C6007184B8 /* RealmSwift.framework in Frameworks */,
 				43E5D3471DC43BE2007184B8 /* MapKit.framework in Frameworks */,
 				00482AA5A540202CF2B37ABA /* Pods_Cal_Zone.framework in Frameworks */,
 			);
@@ -50,6 +91,10 @@
 		43E5D3241DC41907007184B8 = {
 			isa = PBXGroup;
 			children = (
+				43E5D3781DC47903007184B8 /* QuadratTouch.framework */,
+				43E5D3751DC478F1007184B8 /* QuadratTouch.framework */,
+				43E5D36F1DC478C6007184B8 /* Realm.framework */,
+				43E5D3701DC478C6007184B8 /* RealmSwift.framework */,
 				43E5D32F1DC41907007184B8 /* Cal Zone */,
 				43E5D32E1DC41907007184B8 /* Products */,
 				466CA1AA85FA9FBBAA7D7762 /* Pods */,
@@ -68,14 +113,18 @@
 		43E5D32F1DC41907007184B8 /* Cal Zone */ = {
 			isa = PBXGroup;
 			children = (
+				43E5D34C1DC450D2007184B8 /* Cartfile */,
 				43E5D3361DC41907007184B8 /* Main.storyboard */,
 				43E5D3301DC41907007184B8 /* AppDelegate.swift */,
-				43E5D3321DC41907007184B8 /* RestaurantViewController.swift */,
 				43E5D3341DC41907007184B8 /* SecondViewController.swift */,
+				43E5D3321DC41907007184B8 /* RestaurantViewController.swift */,
 				43E5D3391DC41907007184B8 /* Assets.xcassets */,
 				43E5D33B1DC41907007184B8 /* LaunchScreen.storyboard */,
 				43E5D33E1DC41907007184B8 /* Info.plist */,
-				43E5D3441DC4293C007184B8 /* PodFile */,
+				43E5D3481DC445DF007184B8 /* FSAPI.swift */,
+				43E5D34A1DC44E9E007184B8 /* Podfile */,
+				43E5D36B1DC4700B007184B8 /* Venue.swift */,
+				43E5D36D1DC470F4007184B8 /* CoffeeAnnotation.swift */,
 			);
 			path = "Cal Zone";
 			sourceTree = "<group>";
@@ -92,6 +141,10 @@
 		7871586D980C0150F2E4FC2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43E5D3521DC45D58007184B8 /* Realm.framework */,
+				43E5D3531DC45D58007184B8 /* RealmSwift.framework */,
+				43E5D3501DC4595F007184B8 /* QuadratTouch.framework */,
+				43E5D34E1DC4593E007184B8 /* Carthage */,
 				43E5D3461DC43BE2007184B8 /* MapKit.framework */,
 				00D8398E34F512C20AA014F3 /* Pods_Cal_Zone.framework */,
 			);
@@ -111,6 +164,7 @@
 				43E5D32B1DC41907007184B8 /* Resources */,
 				B6970A68574EC61B5FB44346 /* [CP] Embed Pods Frameworks */,
 				4D5CE240DF6E6C73217854EF /* [CP] Copy Pods Resources */,
+				43E5D3681DC4685E007184B8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,9 +213,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E5D34D1DC450D2007184B8 /* Cartfile in Resources */,
 				43E5D33D1DC41907007184B8 /* LaunchScreen.storyboard in Resources */,
 				43E5D33A1DC41907007184B8 /* Assets.xcassets in Resources */,
-				43E5D3451DC4293C007184B8 /* PodFile in Resources */,
+				43E5D34B1DC44E9E007184B8 /* Podfile in Resources */,
 				43E5D3381DC41907007184B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43E5D3351DC41907007184B8 /* SecondViewController.swift in Sources */,
+				43E5D36C1DC4700B007184B8 /* Venue.swift in Sources */,
+				43E5D36E1DC470F4007184B8 /* CoffeeAnnotation.swift in Sources */,
+				43E5D3491DC445DF007184B8 /* FSAPI.swift in Sources */,
 				43E5D3311DC41907007184B8 /* AppDelegate.swift in Sources */,
 				43E5D3331DC41907007184B8 /* RestaurantViewController.swift in Sources */,
 			);
@@ -339,6 +397,10 @@
 			baseConfigurationReference = 0CC776575333C7E8617C6B26 /* Pods-Cal Zone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Cal Zone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "syr-rahulmaddineni.Cal-Zone";
@@ -351,6 +413,10 @@
 			baseConfigurationReference = DE0C84733A6F0E11CEE3279E /* Pods-Cal Zone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Cal Zone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "syr-rahulmaddineni.Cal-Zone";

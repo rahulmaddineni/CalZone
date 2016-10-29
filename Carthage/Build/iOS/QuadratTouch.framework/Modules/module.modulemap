@@ -1,0 +1,10 @@
+framework module QuadratTouch {
+  umbrella header "QuadratTouch.h"
+
+  export *
+  module * { export * }
+}
+
+module QuadratTouch.Swift {
+    header "QuadratTouch-Swift.h"
+}

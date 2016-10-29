@@ -1,0 +1,10 @@
+framework module Quadrat {
+  umbrella header "Quadrat.h"
+
+  export *
+  module * { export * }
+}
+
+module Quadrat.Swift {
+    header "Quadrat-Swift.h"
+}
