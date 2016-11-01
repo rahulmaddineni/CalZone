@@ -26,12 +26,6 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
     {
         super.viewWillAppear(animated)
         
-        if let mapView = self.mapView
-        {
-            mapView.delegate = self
-           
-        }
-        
         if let tableView = self.tableView
         {
             tableView.delegate = self
@@ -42,7 +36,7 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     // User location Attributes
     var locationManager:CLLocationManager?
-    let distanceSpan:Double = 500
+    let distanceSpan:Double = 1000
     
     var lastLocation:CLLocation?
     var venues:[Venue]?
@@ -62,12 +56,8 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
     }
     
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-        if let mapView = self.mapView {
-            let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, distanceSpan, distanceSpan)
-            mapView.setRegion(region, animated: true)
             
             refreshVenues(newLocation, getDataFromFoursquare: true)
-        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -127,12 +117,12 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 location.distanceFromLocation($0.coordinate) < location.distanceFromLocation($1.coordinate)
             }
             
-            for venue in venues!
-            {
-                let annotation = CoffeeAnnotation(title: venue.name, subtitle: venue.address, coordinate: CLLocationCoordinate2D(latitude: Double(venue.latitude), longitude: Double(venue.longitude)))
-                
-                mapView?.addAnnotation(annotation)
-            }
+//            for venue in venues!
+//            {
+//                let annotation = CoffeeAnnotation(title: venue.name, subtitle: venue.address, coordinate: CLLocationCoordinate2D(latitude: Double(venue.latitude), longitude: Double(venue.longitude)))
+//                
+//                mapView?.addAnnotation(annotation)
+//            }
             
             tableView?.reloadData()
         }
@@ -158,28 +148,10 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
         if let venue = venues?[indexPath.row]
         {
             let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: Double(venue.latitude), longitude: Double(venue.longitude)), distanceSpan, distanceSpan)
-            mapView?.setRegion(region, animated: true)
+            //mapView?.setRegion(region, animated: true)
         }
     }
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
-    {
-        if annotation.isKindOfClass(MKUserLocation)
-        {
-            return nil
-        }
-        
-        var view = mapView.dequeueReusableAnnotationViewWithIdentifier("annotationIdentifier")
-        
-        if view == nil
-        {
-            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotationIdentifier")
-        }
-        
-        view?.canShowCallout = true
-        
-        return view
-    }
     
     func onVenuesUpdated(notification:NSNotification)
     {

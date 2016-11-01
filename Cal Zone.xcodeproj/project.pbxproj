@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00482AA5A540202CF2B37ABA /* Pods_Cal_Zone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D8398E34F512C20AA014F3 /* Pods_Cal_Zone.framework */; };
+		434C84F81DC70737003DC0FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 434C84F71DC70737003DC0FB /* GoogleService-Info.plist */; };
+		434C84FA1DC710A2003DC0FB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 434C84F91DC710A2003DC0FB /* Podfile */; };
 		43E5D3311DC41907007184B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5D3301DC41907007184B8 /* AppDelegate.swift */; };
 		43E5D3331DC41907007184B8 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5D3321DC41907007184B8 /* RestaurantViewController.swift */; };
 		43E5D3351DC41907007184B8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5D3341DC41907007184B8 /* SecondViewController.swift */; };
@@ -16,7 +18,6 @@
 		43E5D33D1DC41907007184B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E5D33B1DC41907007184B8 /* LaunchScreen.storyboard */; };
 		43E5D3471DC43BE2007184B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5D3461DC43BE2007184B8 /* MapKit.framework */; };
 		43E5D3491DC445DF007184B8 /* FSAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5D3481DC445DF007184B8 /* FSAPI.swift */; };
-		43E5D34B1DC44E9E007184B8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 43E5D34A1DC44E9E007184B8 /* Podfile */; };
 		43E5D34D1DC450D2007184B8 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 43E5D34C1DC450D2007184B8 /* Cartfile */; };
 		43E5D36C1DC4700B007184B8 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5D36B1DC4700B007184B8 /* Venue.swift */; };
 		43E5D36E1DC470F4007184B8 /* CoffeeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5D36D1DC470F4007184B8 /* CoffeeAnnotation.swift */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		00D8398E34F512C20AA014F3 /* Pods_Cal_Zone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cal_Zone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC776575333C7E8617C6B26 /* Pods-Cal Zone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cal Zone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cal Zone/Pods-Cal Zone.debug.xcconfig"; sourceTree = "<group>"; };
+		434C84F71DC70737003DC0FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		434C84F91DC710A2003DC0FB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		43E5D32D1DC41907007184B8 /* Cal Zone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cal Zone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E5D3301DC41907007184B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E5D3321DC41907007184B8 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +60,6 @@
 		43E5D33E1DC41907007184B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43E5D3461DC43BE2007184B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		43E5D3481DC445DF007184B8 /* FSAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAPI.swift; sourceTree = "<group>"; };
-		43E5D34A1DC44E9E007184B8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		43E5D34C1DC450D2007184B8 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		43E5D34E1DC4593E007184B8 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
 		43E5D3501DC4595F007184B8 /* QuadratTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuadratTouch.framework; path = Carthage/Build/iOS/QuadratTouch.framework; sourceTree = "<group>"; };
@@ -113,7 +115,9 @@
 		43E5D32F1DC41907007184B8 /* Cal Zone */ = {
 			isa = PBXGroup;
 			children = (
+				434C84F71DC70737003DC0FB /* GoogleService-Info.plist */,
 				43E5D34C1DC450D2007184B8 /* Cartfile */,
+				434C84F91DC710A2003DC0FB /* Podfile */,
 				43E5D3361DC41907007184B8 /* Main.storyboard */,
 				43E5D3301DC41907007184B8 /* AppDelegate.swift */,
 				43E5D3341DC41907007184B8 /* SecondViewController.swift */,
@@ -122,7 +126,6 @@
 				43E5D33B1DC41907007184B8 /* LaunchScreen.storyboard */,
 				43E5D33E1DC41907007184B8 /* Info.plist */,
 				43E5D3481DC445DF007184B8 /* FSAPI.swift */,
-				43E5D34A1DC44E9E007184B8 /* Podfile */,
 				43E5D36B1DC4700B007184B8 /* Venue.swift */,
 				43E5D36D1DC470F4007184B8 /* CoffeeAnnotation.swift */,
 			);
@@ -187,6 +190,7 @@
 				TargetAttributes = {
 					43E5D32C1DC41907007184B8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 92W6AA2674;
 					};
 				};
 			};
@@ -213,10 +217,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434C84FA1DC710A2003DC0FB /* Podfile in Resources */,
 				43E5D34D1DC450D2007184B8 /* Cartfile in Resources */,
 				43E5D33D1DC41907007184B8 /* LaunchScreen.storyboard in Resources */,
 				43E5D33A1DC41907007184B8 /* Assets.xcassets in Resources */,
-				43E5D34B1DC44E9E007184B8 /* Podfile in Resources */,
+				434C84F81DC70737003DC0FB /* GoogleService-Info.plist in Resources */,
 				43E5D3381DC41907007184B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +402,8 @@
 			baseConfigurationReference = 0CC776575333C7E8617C6B26 /* Pods-Cal Zone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -405,6 +412,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "syr-rahulmaddineni.Cal-Zone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -413,6 +421,8 @@
 			baseConfigurationReference = DE0C84733A6F0E11CEE3279E /* Pods-Cal Zone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -421,6 +431,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "syr-rahulmaddineni.Cal-Zone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
