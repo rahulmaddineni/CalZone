@@ -86,6 +86,11 @@ class FSAPI
                                             venueObject.latitude = latitude
                                         }
                                         
+//                                        if let distance = location["distance"] as? Float
+//                                        {
+//                                            venueObject.distancetolocation = distance
+//                                        }
+                                        
                                         if let formattedAddress = location["formattedAddress"] as? [String]
                                         {
                                             venueObject.address = formattedAddress.joinWithSeparator(" ")

@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FIRApp.configure()
         // Override point for customization after application launch.
+        
+        //let navController = window!.rootViewController as! UINavigationController
+        
+        //let restaurantController = navController.topViewController
+        
+        //RestaurantViewController = restaurantController
         return true
     }
 

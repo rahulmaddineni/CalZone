@@ -18,6 +18,12 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //set contentInset for tableView
+        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+        tableView!.contentInset = insets
+        tableView!.estimatedRowHeight = 65
+        navigationItem.title = "NearBy Restaurants"
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("onVenuesUpdated:"), name: API.notifications.venuesUpdated, object: nil)
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -40,6 +46,8 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     var lastLocation:CLLocation?
     var venues:[Venue]?
+    var region: MKCoordinateRegion?
+    var annotation: CoffeeAnnotation?
     
     // Instantiate Location Manger
     override func viewDidAppear(animated: Bool)
@@ -72,25 +80,55 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cellIdentifier");
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
         
-        if cell == nil
-        {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cellIdentifier")
-        }
+        cell.updateLabels() //sets the fonts of the labels
+        
+//        if cell == nil
+//        {
+//            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cellIdentifier")
+//        }
         
         if let venue = venues?[indexPath.row]
         {
-            cell!.textLabel?.text = venue.name
-            cell!.detailTextLabel?.text = venue.address
+            cell.nameLabel?.text = venue.name
+            cell.addressLabel?.text = venue.address
+            //cell.distanceLabel?.text = "\(venue.distancetolocation)"
+            cell.distanceLabel?.text = "0.1 mi"
         }
         
-        return cell!
+        return cell
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // pass item details to item controller
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //if segue.identifier == "ShowItem" {
+         //tableView?.indexPathForSelectedRow?.row
+            //segue  = ItemViewController
+            let destinationVC = segue.destinationViewController as! ItemViewController
+            
+            
+            if let indexPath = self.tableView!.indexPathForSelectedRow{
+                
+                let selectedRow =  venues![indexPath.row]
+                print("Selected Row:")
+                print(selectedRow)
+                destinationVC.venue = selectedRow
+                region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: Double(selectedRow.latitude), longitude: Double(selectedRow.longitude)), distanceSpan, distanceSpan)
+                destinationVC.itemregion = region
+                destinationVC.itemannotation = annotation
+                print("Region:")
+                print(self.region)
+                print("Annotation:")
+                print(annotation)
+        }
+            
+        //}
     }
     
     func refreshVenues(location: CLLocation?, getDataFromFoursquare:Bool = false)
@@ -117,12 +155,12 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 location.distanceFromLocation($0.coordinate) < location.distanceFromLocation($1.coordinate)
             }
             
-//            for venue in venues!
-//            {
-//                let annotation = CoffeeAnnotation(title: venue.name, subtitle: venue.address, coordinate: CLLocationCoordinate2D(latitude: Double(venue.latitude), longitude: Double(venue.longitude)))
-//                
+            for venue in venues!
+            {
+                annotation = CoffeeAnnotation(title: venue.name, subtitle: venue.address, coordinate: CLLocationCoordinate2D(latitude: Double(venue.latitude), longitude: Double(venue.longitude)))
+                
 //                mapView?.addAnnotation(annotation)
-//            }
+            }
             
             tableView?.reloadData()
         }
@@ -145,11 +183,18 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        if let venue = venues?[indexPath.row]
-        {
-            let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: Double(venue.latitude), longitude: Double(venue.longitude)), distanceSpan, distanceSpan)
-            //mapView?.setRegion(region, animated: true)
-        }
+//        if let venue = venues?[indexPath.row]
+//        {
+//             let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: Double(venue.latitude), longitude: Double(venue.longitude)), distanceSpan, distanceSpan)
+//            print("Self Region before")
+//            print(self.region)
+//            self.region = region
+//            print("Venue Region:")
+//            print(region)
+//            print("Self Region After")
+//            print(self.region)
+//            //mapView?.setRegion(region, animated: true)
+//        }
     }
     
     

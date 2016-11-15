@@ -18,6 +18,7 @@ class Venue: Object
     
     dynamic var latitude:Float = 0
     dynamic var longitude:Float = 0
+    //dynamic var distancetolocation:Float = 0
     
     dynamic var address:String = ""
     

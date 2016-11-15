@@ -10,5 +10,6 @@ target 'Cal Zone' do
 pod Firebase/Core
 pod Firebase/Auth
 pod Firebase/Database
+pod 'RealmSwift'
 
 end
