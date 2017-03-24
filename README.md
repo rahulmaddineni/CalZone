@@ -129,7 +129,9 @@ The TimeLine tab displays all the places user had checked-in with date & time li
 * TimeLine cell consists of:
 -	Place label
 -	Time label
-* These represent the name of the restaurant and the timestamp when the check-in is made.
+
+These represent the name of the restaurant and the timestamp when the check-in is made.
+
 * Each TimeLine Item has the following fields:
 -	Place
 -	timeStamp
@@ -173,3 +175,33 @@ And when done button is clicked, unwind to segue is called and redirected to mai
 * Selecting a contact on the SplitBill View Controller
 - The same earlier detail view controller is called and asked the user to enter money and select one of the 4 split bill options.
 - When done button is selects, it is again unwinded to the main view controller.
+
+### Model View Architecture
+![alt text](https://github.com/rahulmaddineni/CalZone/blob/master/ScreenShots/5.PNG "Architecture")
+
+### Screen Shots
+![alt text](https://github.com/rahulmaddineni/CalZone/blob/master/ScreenShots/1.PNG "Login & Register")
+![alt text](https://github.com/rahulmaddineni/CalZone/blob/master/ScreenShots/2.PNG "Detailed Info & Profile")
+![alt text](https://github.com/rahulmaddineni/CalZone/blob/master/ScreenShots/3.PNG "Timeline")
+![alt text](https://github.com/rahulmaddineni/CalZone/blob/master/ScreenShots/4.PNG "SpliBill")
+
+
+> Future Work
+-	Provide a calendar view for check-ins with a month view and day view to group a set of check-ins
+-	Provide Menu for the restaurant along with some calorie information
+-	Provide an option to search for restaurants
+-	Provide restaurant categories: Italian, Indian, Chinese, French, …
+-	Provide the results by age based restrictions such as restricting the users under 21 to restaurant data but not bars
+-	Provide option to input user ratings
+-	Provide option to add friends so:
+- Can share in app details like split bill (if present sent via app else sent via text)
+- Can allow friends to view the check-ins by the user
+- Can tag friends in a check-in
+-	Provide the user option to update password
+-	Provide user the option to upload profile image
+
+### References
+-	Firebase (www.firebase.com)
+-	Foursquare (www.developer.foursqaure.com)
+-	Realm (ww.relam.io)
+
